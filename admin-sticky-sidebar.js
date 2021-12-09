@@ -1,15 +1,15 @@
 // makes the right sidebar on post.php sticky, if needed to the bottom ---------
-function resizeHandler() {
+function assResizeHandler() {
+  // console.log('assResizeHandler');
+
+  // elements available?
   var sideEl = document.getElementById('side-sortables');
   var sidePosEl = document.getElementById('postbox-container-1');
-  if (sideEl == null || sidePosEl == null) return;
+  if (sideEl === null || sidePosEl === null) return;
 
   // get heights
   var sideHeight = sideEl.offsetHeight;
   var sideSpace = window.innerHeight - 50;
-  var postBodyHeight = document.getElementById('post-body-content').offsetHeight;
-
-  sidePosEl.style['margin-top'] = -postBodyHeight - 20 + 'px';
 
   // if the sidebar is larger than the available space
   if (sideHeight > sideSpace) {
@@ -23,10 +23,16 @@ function resizeHandler() {
     // there is enough space, just let it stick to the top
     sidePosEl.style.top = '50px';
   }
+
+  // also set margin top in case of weird elements oreder
+  var postBody = document.getElementById('post-body-content');
+  if (postBody !== null) {
+    sidePosEl.style['margin-top'] = -postBody.offsetHeight - 20 + 'px';
+  }
 }
 
 // go back to previous scroll position if remaining on same post ---------------
-function gotoPrevScroll() {
+function assGotoPrevScroll() {
   var prev_scrollpos = localStorage.getItem('prev_scrollpos');
   var prev_url = localStorage.getItem('prev_url');
 
@@ -41,16 +47,23 @@ function gotoPrevScroll() {
 }
 
 // listeners and callers
-resizeHandler();
+assResizeHandler();
 
-jQuery(window).on('resize', resizeHandler);
+jQuery(window).on('resize', assResizeHandler);
 
 jQuery(window).load(function () {
-  resizeHandler();
-  new ResizeObserver(resizeHandler).observe(document.getElementById('side-sortables'));
-  new ResizeObserver(resizeHandler).observe(document.getElementById('post-body-content'));
+  // console.log('load');
 
-  gotoPrevScroll();
+  assResizeHandler();
+  assGotoPrevScroll();
+
+  // add listener to sidebar size
+  var sideEl = document.getElementById('side-sortables');
+  if (sideEl !== null) new ResizeObserver(assResizeHandler).observe(sideEl);
+
+  // add listener to body size
+  var bodyEl = document.getElementById('post-body-content');
+  if (bodyEl !== null) new ResizeObserver(assResizeHandler).observe(bodyEl);
 });
 
 jQuery(window).on('beforeunload', function () {

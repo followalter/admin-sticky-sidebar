@@ -6,11 +6,11 @@
 
 #postbox-container-1 {
   position: sticky;
-  top: 50px;
+  top: 50px; /* overwritten in js */
   right: 20px;
   z-index: 1;
 
-  margin-top: -92px;
+  margin-top: -92px; /* overwritten in js */
   margin-left: auto;
 
   height: 0;
