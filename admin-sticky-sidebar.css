@@ -1,0 +1,35 @@
+/* make right sided elements sticky on post.php page */
+#post-body-content {
+  float: none;
+  margin-bottom: 40px;
+}
+
+#postbox-container-1 {
+  position: sticky;
+  top: 50px;
+  right: 20px;
+  z-index: 1;
+
+  margin-top: -92px;
+  margin-left: auto;
+
+  height: 0;
+
+  transition: top 0.2s;
+}
+
+#postbox-container-2 {
+  float: none;
+}
+
+@media (max-width: 850px) {
+  #postbox-container-1 {
+    margin-top: 0;
+
+    height: auto;
+  }
+
+  #postbox-container-2 {
+    float: left;
+  }
+}
