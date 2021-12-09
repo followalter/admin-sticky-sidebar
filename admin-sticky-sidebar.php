@@ -12,7 +12,7 @@ License: GPLv2
 function admin_sticky_sidebar_css($hook) {
   // only add to the post.php admin page.
   if ('post.php' !== $hook) return;
-  wp_enqueue_style( 'admin-sticky-sidebar-style',  plugins_url( 'admin-sticky-sidebar.css?v=1' , __FILE__ ));
+  wp_enqueue_style( 'admin-sticky-sidebar-style',  plugins_url( 'admin-sticky-sidebar.css?v=1.2' , __FILE__ ));
 }
 add_action('admin_enqueue_scripts', 'admin_sticky_sidebar_css');
 
@@ -22,7 +22,7 @@ add_action('admin_enqueue_scripts', 'admin_sticky_sidebar_css');
 function admin_sticky_sidebar_js($hook) {
   // only add to the post.php admin page.
   if ('post.php' !== $hook) return;
-  wp_enqueue_script('admin-sticky-sidebar-script', plugins_url( 'admin-sticky-sidebar.js?v=1' , __FILE__ ));
+  wp_enqueue_script('admin-sticky-sidebar-script', plugins_url( 'admin-sticky-sidebar.js?v=1.2' , __FILE__ ));
 }
 add_action('admin_enqueue_scripts', 'admin_sticky_sidebar_js');
 
