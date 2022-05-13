@@ -3,8 +3,8 @@ Contributors: followalter
 Donate link: https://paypal.me/followalter
 Tags: admin, sticky, fixed, floating, float, sidebar, submit, publish, update, box, modal, scroll, timesaver, lifehack, lifesaver, float
 Requires at least: 5.0
-Tested up to: 5.9.1
-Stable tag: 1.3.1
+Tested up to: 5.9.3
+Stable tag: 1.4
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -47,3 +47,7 @@ Just like every plugin:
 
 = 1.3.1 =
 * Tested with Wordpress 5.9.1
+
+= 1.4 =
+* Tested with Wordpress 5.9.3
+* Fix for Firefox scroll bug

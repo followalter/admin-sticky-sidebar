@@ -22,6 +22,11 @@
   float: none;
 }
 
+#postbox-container-2 .inside {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 850px) {
   #postbox-container-1 {
     margin-top: 0;
