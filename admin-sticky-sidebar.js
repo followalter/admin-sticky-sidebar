@@ -2,6 +2,9 @@
 function assResizeHandler() {
   // console.log('assResizeHandler');
 
+  var submitEl = document.getElementById('submitdiv');
+  if (submitEl === null) return;
+
   // elements available?
   var sideEl = document.getElementById('side-sortables');
   var sidePosEl = document.getElementById('postbox-container-1');
@@ -26,7 +29,9 @@ function assResizeHandler() {
 
   // also set margin top in case of weird elements oreder
   var postBody = document.getElementById('post-body-content');
-  if (postBody !== null) {
+  if (postBody === null) {
+    sidePosEl.style['margin-top'] = '0';
+  } else {
     sidePosEl.style['margin-top'] = -postBody.offsetHeight - 20 + 'px';
   }
 }

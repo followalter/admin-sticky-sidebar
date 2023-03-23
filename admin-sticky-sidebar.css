@@ -1,19 +1,19 @@
 /* make right sided elements sticky on post.php page */
 #post-body-content {
   float: none;
-
   margin-bottom: 40px;
 }
 
 #postbox-container-1 {
   position: sticky;
-  z-index: 1;
   top: 50px; /* overwritten in js */
   right: 20px;
+  z-index: 1;
 
-  height: 0;
   margin-top: -92px; /* overwritten in js */
   margin-left: auto;
+
+  height: 0;
 
   transition: top 0.2s;
 }
@@ -28,10 +28,19 @@
   width: 100%;
 }
 
+@media (max-width: 1200px) {
+  .post-type-attachment #postbox-container-1 {
+    margin-top: 0 !important;
+
+    height: auto;
+  }
+}
+
 @media (max-width: 850px) {
   #postbox-container-1 {
+    margin-top: 0 !important;
+
     height: auto;
-    margin-top: 0;
   }
 
   #postbox-container-2 {
