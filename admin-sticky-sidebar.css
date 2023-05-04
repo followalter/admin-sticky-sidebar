@@ -6,13 +6,14 @@
 
 .body--ass #postbox-container-1 {
   position: sticky;
-  z-index: 1;
   top: 50px; /* overwritten in js */
   right: 20px;
+  z-index: 1;
 
-  height: 0;
   margin-top: -92px; /* overwritten in js */
   margin-left: auto;
+
+  height: 0;
 
   transition: top 0.2s;
 }
@@ -23,20 +24,33 @@
 
 .body--ass #postbox-container-2 .inside {
   display: inline-block;
+
   width: 100%;
+}
+
+.body--ass .columns-1 #postbox-container-1 {
+  margin-top: 0 !important; /* overwritten in js */
+
+  height: auto;
+}
+
+.body--ass .columns-1 #postbox-container-2 {
+  float: left;
 }
 
 @media (max-width: 1200px) {
   .body--ass .post-type-attachment #postbox-container-1 {
-    height: auto;
     margin-top: 0 !important;
+
+    height: auto;
   }
 }
 
 @media (max-width: 850px) {
   .body--ass #postbox-container-1 {
-    height: auto;
     margin-top: 0 !important;
+
+    height: auto;
   }
 
   .body--ass #postbox-container-2 {
