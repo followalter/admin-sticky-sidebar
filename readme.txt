@@ -70,5 +70,8 @@ Just like every plugin:
 = 1.5.3 =
 * Tested with Wordpress 6.2
 
+= 1.5.4 =
+* Cleanup
+
 = 1.6 =
-* fix for single column page
+* Fix for single column page
