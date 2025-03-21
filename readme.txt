@@ -3,8 +3,8 @@ Contributors: followalter
 Donate link: https://paypal.me/followalter
 Tags: admin, sticky, fixed, floating, float, sidebar, submit, publish, update, box, modal, scroll, timesaver, lifehack, lifesaver, float
 Requires at least: 5.0
-Tested up to: 6.5.3
-Stable tag: 1.6.3
+Tested up to: 6.7.2
+Stable tag: 1.6.4
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -84,3 +84,6 @@ Just like every plugin:
 
 = 1.6.3 =
 * Tested with Wordpress 6.5.3 visible
+
+= 1.6.4 =
+* Tested with Wordpress 6.7.2
